@@ -1,46 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Handling</title>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Controle Diário</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<form id="userForm">
-    <h2>User Registration</h2>
+	<form id="controleDiario">
+		<h2>Controle Diário</h2>
 
-    <label for="firstName">First Name</label>
-    <input type="text" id="firstName" name="firstName">
+		<label for="name">Nome</label>
+		<input type="text" id="name" name="nome">
 
-    <label for="lastName">Last Name</label>
-    <input type="text" id="lastName" name="lastName">
+		<label for="matricula">Matrícula</label>
+		<input type="text" id="matricula" name="matricula">
 
-    <label for="email">Email</label>
-    <input type="text" id="email" name="email">
+		<label for="kmIniciais">Km Iniciais</label>
+		<input type="number" id="kmIniciais" name="kmIniciais">
 
-    <label for="contactNumber">Contact Number</label>
-    <input type="text" id="contactNumber" name="contactNumber">
+		<label for="giro">Giro</label>
+		<input type="text" id="giro" name="giro">
 
-    <label for="address">Address</label>
-    <textarea id="address" name="address"></textarea>
+		<label for="qtdObjetos">Qtd Objetos</label>
+		<input type="number" id="qtdObjetos" name="qtdObjetos">
 
-    <label for="city">City</label>
-    <input type="text" id="city" name="city">
-
-    <label for="state">state</label>
-    <input type="text" id="state" name="state">
-
-    <label for="country">Country</label>
-    <input type="text" id="country" name="country">
-
-    <label for="zipCode">Zip Code</label>
-    <input type="text" id="zipCode" name="zipCode">
-
-    <button type="submit">Submit</button>
-    <div id="success" class="success"></div>
-
-</form>
-<script src="script.js"></script>
+		<label for="qtdRecolhas">Qtd Recolhas</label>
+		<input type="number" id="qtdRecolhas" name="qtdRecolhas">
+		
+		<button type="submit">Enviar</button>
+		<div id="success" class="success"></div>
+	</form>
+	<script src="script.js"></script>
 </body>
 </html>

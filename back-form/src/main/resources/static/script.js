@@ -1,41 +1,34 @@
-document.getElementById("userForm").addEventListener("submit", function(event) {
-    // console.log("Objeto do evento: ", event);
-    // console.log("Quem disparou o evento: ", event.target);
 
-    event.preventDefault(); // Prevent the default form submission
+document.getElementById("controleDiario").addEventListener("submit", function(event) {
+	event.preventDefault(); // Permite que você controle o envio via JavaScript
 
-    const formData = {
-        firstName: document.getElementById("firstName").value,
-        lastName: document.getElementById("lastName").value,
-        email: document.getElementById("email").value,
-        contactNumber: document.getElementById("contactNumber").value,
-        address: document.getElementById("address").value,
-        city: document.getElementById("city").value,
-        state: document.getElementById("state").value,
-        country: document.getElementById("country").value,
-    }
-
-    console.log("Form Data submitted: ", formData);
-
-    // Now call spring boot api and save into database
-
-    fetch('/api/save-data',
-        {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        }).then(response => {
-        if (response.ok) {
-            document.getElementById("success").innerText = "Data saved successfully";
-            document.getElementById("userForm").reset(); // Reset the form
-        } else {
-            //throw new Error('Network response was not ok');
-            alert("Error saving data. Please try again.");
-        }
-    }).catch(error => {
-        console.error("Error:", error);
-        alert("Error saving data. Please try again.");
-    });
+	const formData = {
+		name: document.getElementById("name").value,
+		matricula: document.getElementById("matricula").value,
+		kmIniciais: document.getElementById("kmIniciais").value,
+		giro: document.getElementById("giro").value,
+		qtdObjetos: document.getElementById("qtdObjetos").value,
+		qtdRecolhas: document.getElementById("qtdRecolhas").value
+	}
+	
+	console.log("Form Data: ", formData);
+	
+	fetch('http://localhost:8080/api/save-data', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify(formData)
+	}).then(response => {
+		if (response.ok) {
+			console.log("Form Data submitted: ", formData);
+			document.getElementById("success").innerText = "Data saved successfully";
+			document.getElementById("controleDiario").reset();
+		} else {
+			alert("Error savind data. Please try again.");
+		}
+	}).catch(error => {
+		console.error("Error: ", error);
+		alert("Error savind data. Please try again.");
+	});
 });

@@ -1,86 +1,21 @@
-/* O seletor 'body' aplica estilos à página inteira */
+
 body {
-    font-family: Arial, sans-serif; /* Define a fonte: usa Arial ou qualquer sem serifa se não houver Arial */
-    background-color: #f4f4f4;    /* Define uma cor de fundo cinza bem clarinho */
-    display: flex;                 /* Ativa o modo Flexbox para alinhar elementos filhos facilmente */
-    justify-content: center;       /* Centraliza o conteúdo (o formulário) horizontalmente */
-    padding: 40px;                 /* Cria um espaço interno de 40px nas bordas da página */
-}
-
-/* Estilo do container do formulário */
-form {
-    background-color: #fff;        /* Fundo branco para o formulário se destacar do corpo cinza */
-    padding: 20px 30px;            /* Espaço interno: 20px (cima/baixo) e 30px (lados) */
-    border-radius: 8px;            /* Arredonda os cantos do formulário */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Cria uma sombra suave para dar profundidade */
-}
-
-/* Título do formulário */
-h2 {
-    text-align: center;            /* Centraliza o texto do título */
-    margin-bottom: 20px;           /* Empurra o conteúdo abaixo dele para longe em 20px */
-}
-
-/* Rótulos dos campos (ex: "Nome", "E-mail") */
-label {
-    display: block;                /* Faz o label ocupar a linha toda, forçando o input a ir para baixo */
-    margin-top: 8px;               /* Dá um espaço em relação ao elemento de cima */
-    font-weight: bold;             /* Deixa o texto em negrito */
-}
-
-/* Campos de entrada e área de texto */
-input, textarea {
-    display: block;                /* Garante que ocupem sua própria linha */
-    width: 100%;                   /* Faz com que ocupem toda a largura disponível do formulário */
-    padding: 4px;                  /* Espaço interno para o texto não encostar nas bordas (está bem pequeno aqui!) */
-    margin-top: 8px;               /* Espaço entre o label e o campo */
-    border: 1px solid #ccc;        /* Borda fina e cinza */
-    border-radius: 4px;            /* Arredonda levemente os cantos dos campos */
-}
-
-/* Estilo do botão de envio */
-button {
-    margin-top: 20px;              /* Espaço grande acima do botão para separá-lo dos campos */
-    width: 100%;                   /* Botão ocupa a largura total do formulário */
-    background-color: aqua;        /* Cor de fundo azul piscina */
-    color: white;                  /* Cor do texto branca */
-    border: none;                  /* Remove a borda padrão feia do navegador */
-    padding: 2px;                  /* Espaço interno do botão (também está bem pequeno) */
-    border-radius: 4px;            /* Arredonda os cantos do botão */
-    font-size: 16px;               /* Aumenta o tamanho da letra do botão */
-    cursor: pointer;               /* Transforma a seta do mouse em uma "mãozinha" ao passar por cima */
-}
-
-/* Efeito visual quando o mouse passa sobre o botão */
-button:hover {
-    background-color: #007bff;     /* Muda a cor para um azul mais escuro ao passar o mouse */
-}
-
-/* Classe para a mensagem de sucesso que seu JS exibe */
-.success {
-    margin: 15px;                  /* Espaçamento ao redor da mensagem */
-    color: green;                  /* Texto na cor verde para indicar sucesso */
-    text-align: center;            /* Centraliza a mensagem de confirmação */
-}
-
-/* body {
 	font-family: Arial, sans-serif;
 	background-color: #f4f4f4;
 	display: flex;
 	justify-content: center;
-	padding: 40px;
+	padding: 80x;
 }
 
 form {
 	background-color: #fff;
 	padding: 20px 30px;
 	border-radius: 8px;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 2px 10px rgb(0, 0, 0, 0.3);
 }
 
 h2 {
 	text-align: center;
-	margin-bottom: 20px;
 }
 
 label {
@@ -89,19 +24,19 @@ label {
 	font-weight: bold;
 }
 
-input, textarea {
+input {
 	display: block;
 	width: 100%;
-	padding: 2px;
-	margin-top:  8px;
+	padding: 4px;
+	margin-top: 8px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
 }
 
 button {
 	margin-top: 20px;
-	width: 100%;
-	background-color: aqua;
+	width: 105%;
+	background-color:aqua;
 	color: white;
 	border: none;
 	padding: 2px;
@@ -114,8 +49,4 @@ button:hover {
 	background-color: #007bff;
 }
 
-.success {
-	margin: 15px;
-	color: green;
-	text-align: center;
-} */
+
