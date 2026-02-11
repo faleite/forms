@@ -3,11 +3,12 @@ body {
 	font-family: Arial, sans-serif;
 	background-color: #f4f4f4;
 	display: flex;
-	justify-content: center;
-	padding: 80x;
+	flex-direction: column; /*coloca título e form um embaixo do outro*/
+	align-items: center; /*centraliza ambos igualmente no eixo horizontal*/
 }
 
 form {
+	margin-top: 2px;
 	background-color: #fff;
 	padding: 20px 30px;
 	border-radius: 8px;
@@ -35,7 +36,7 @@ input {
 
 button {
 	margin-top: 20px;
-	width: 105%;
+	width: 107%;
 	background-color:aqua;
 	color: white;
 	border: none;
@@ -49,4 +50,9 @@ button:hover {
 	background-color: #007bff;
 }
 
+.success {
+	margin: 15px;
+	color: green;
+	text-align: center;
+}
 

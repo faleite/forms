@@ -2,17 +2,14 @@
 GET https://examples.http-client.intellij.net/get
     ?generated-in=IntelliJ IDEA
 
-### Create User
-POST localhost:8080/api/save-data
+### Save Start Task
+POST localhost:8080/api/start/save
 Content-Type: application/json
 
 {
-  "firstName":  "Fabrcio",
-  "lastName": "Leite",
-  "email":  "fa@gmail.com",
-  "contactNumber": "935118690",
-  "address":  "Praceta Andre Resende 4",
-  "city": "Almada",
-  "state":  "Setubal",
-  "country": "2810V"
+  "name":  "Fabricio Leite",
+  "carRegistration": "BC-98-JP",
+  "circuit":  "2825H",
+  "initialKm":  844163,
+  "numObjects": 154
 }
