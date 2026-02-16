@@ -2,7 +2,6 @@ package faleite.xyz.back_form.api.controller;
 
 import faleite.xyz.back_form.domain.dto.startTaskCreateRequest;
 import faleite.xyz.back_form.domain.dto.startTaskResponse;
-import faleite.xyz.back_form.domain.model.startTask;
 import faleite.xyz.back_form.domain.service.startTaskService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
