@@ -2,6 +2,28 @@
 GET https://examples.http-client.intellij.net/get
     ?generated-in=IntelliJ IDEA
 
+###
+GET http://localhost:8080/test
+
+###
+POST http://localhost:8080/auth/register
+Content-Type: application/json
+
+{
+  "name": "Fabricio Leite",
+  "login": "SC26907",
+  "password": "26907"
+}
+
+###
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "login": "SC26907",
+  "password": "26907"
+}
+
 ### Save Start Task
 POST localhost:8080/api/start/save
 Content-Type: application/json
