@@ -48,6 +48,7 @@ public class AuthController {
         return ResponseEntity.ok(new LoginResponse(token));
     }
 
+    // Evitar registro de duplicado
     @PostMapping("/register")
     public ResponseEntity<RegisterUserResponse> register(@Valid @RequestBody RegisterUserRequest request) {
         UserEntity newUser = new UserEntity();
