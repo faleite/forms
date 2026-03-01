@@ -44,9 +44,10 @@ public class SecurityConfig {
     @Bean
     public WebSecurityCustomizer webSecurityCustomizer() {
         return (web) -> web.ignoring()
-                .requestMatchers("/begin-task.css")
-                .requestMatchers("/begin-task.js")
-                .requestMatchers("/begin-task.html");
+                .requestMatchers("/index.html")
+                .requestMatchers("/css/**")
+                .requestMatchers("/js/**")
+                .requestMatchers("/pages/**");
     }
 
     @Bean

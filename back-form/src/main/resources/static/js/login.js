@@ -18,8 +18,7 @@ document.getElementById("entrar").addEventListener("submit", function(event){
 		password: document.getElementById("password").value,
 	}
 
-	//
-	console.log("Form Data: ", formEnterData);
+	// console.log("Form Data: ", formEnterData);
 
 	fetch('/auth/login', {
 		method: 'POST',
@@ -29,7 +28,14 @@ document.getElementById("entrar").addEventListener("submit", function(event){
 		body: JSON.stringify(formEnterData)
 	}).then(response => {
 		if (response.ok) {
-			document.getElementById
+			document.getElementById("entrar").reset();
+			browse('begin-task');
+			// alert("Você logou corretamente!");
+		} else {
+			alert("Dados Inválidos. Tente novamente!");
 		}
-	})
-})
+	}).catch(error => {
+		console.error("Erro:", error);
+		alert("(Error) Dados Inválidos. Tente novamente!");
+	});
+});
