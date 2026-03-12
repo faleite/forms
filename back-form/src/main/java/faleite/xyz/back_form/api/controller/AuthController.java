@@ -54,11 +54,10 @@ public class AuthController {
         UserEntity newUser = new UserEntity();
         newUser.setPassword(passwordEncoder.encode(request.password()));
         newUser.setLogin(request.login());
-        newUser.setName(request.name());
 
         repository.save(newUser);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(
-                new RegisterUserResponse(newUser.getName(), newUser.getLogin()));
+                new RegisterUserResponse(newUser.getLogin()));
     }
 }

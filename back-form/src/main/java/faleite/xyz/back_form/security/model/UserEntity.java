@@ -1,5 +1,6 @@
 package faleite.xyz.back_form.security.model;
 
+import faleite.xyz.back_form.domain.model.Collaborator;
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -15,23 +16,29 @@ public class UserEntity implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
-
+    @Column(nullable = false, unique = true, length = 80)
     private String login;
 
+    @Column(nullable = false)
     private String password;
 
-    private String carRegister;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false, length = 20)
+    private Role role;
+
+    @OneToOne
+    @JoinColumn(name = "collaborator_id")
+    private Collaborator collaborator;
 
     public UserEntity() {
     }
 
-    public UserEntity(Long id, String name, String login, String password, String carRegister) {
+    public UserEntity(Long id, String login, String password, Role role, Collaborator collaborator) {
         this.id = id;
-        this.name = name;
         this.login = login;
         this.password = password;
-        this.carRegister = carRegister;
+        this.role = role;
+        this.collaborator = collaborator;
     }
 
     @Override
@@ -72,14 +79,6 @@ public class UserEntity implements UserDetails {
         return id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getLogin() {
         return login;
     }
@@ -96,11 +95,19 @@ public class UserEntity implements UserDetails {
         this.password = password;
     }
 
-    public String getCarRegister() {
-        return carRegister;
+    public Role getRole() {
+        return role;
     }
 
-    public void setCarRegister(String carRegister) {
-        this.carRegister = carRegister;
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public Collaborator getCollaboratorId() {
+        return collaborator;
+    }
+
+    public void setCollaboratorId(Collaborator collaborator) {
+        this.collaborator = collaborator;
     }
 }
